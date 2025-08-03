@@ -1,0 +1,23 @@
+<section id="projects" class="projects-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2>Personal Projects</h2>
+      <p>My side projects and experiments</p>
+    </div>
+    
+    <div class="projects-grid">
+      <div class="project-card" *ngFor="let project of projects" data-aos="fade-up">
+        <div class="project-header">
+          <h3>{{ project.title }}</h3>
+          <div class="project-meta">
+            <span><i class="fas fa-calendar"></i> {{ project.date }}</span>
+          </div>
+        </div>
+        <div class="project-technologies">
+          <span *ngFor="let tech of project.technologies">{{ tech }}</span>
+        </div>
+        <p class="project-description">{{ project.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

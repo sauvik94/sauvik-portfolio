@@ -1,0 +1,28 @@
+<section id="skills" class="skills-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2>Skills & Expertise</h2>
+      <p>Technologies I work with</p>
+    </div>
+    
+    <div class="skills-container">
+      <div class="skill-category" *ngFor="let category of skillCategories" data-aos="fade-up">
+        <h3>{{ category.name }}</h3>
+        <div class="skills-grid">
+          <div class="skill-item" *ngFor="let skill of category.skills">
+            <div class="skill-info">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-level">{{ skill.level }}%</span>
+            </div>
+            <div class="progress-bar">
+              <div 
+                class="progress-fill {{ getProgressBarClass(skill.level) }}" 
+                [style.width]="skill.level + '%'">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

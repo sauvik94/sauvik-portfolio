@@ -1,0 +1,39 @@
+<section id="experience" class="experience-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2>Work Experience</h2>
+      <p>My professional journey and contributions</p>
+    </div>
+    
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let exp of experiences; let i = index" 
+           data-aos="fade-up" [attr.data-aos-delay]="i * 100">
+        <div class="timeline-badge">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>{{ exp.position }}</h3>
+            <h4>{{ exp.company }}</h4>
+            <div class="timeline-period">
+              <span><i class="fas fa-calendar"></i> {{ exp.duration }}</span>
+              <span><i class="fas fa-map-marker-alt"></i> {{ exp.location }}</span>
+            </div>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li *ngFor="let desc of exp.description">{{ desc }}</li>
+            </ul>
+            
+            <div class="projects" *ngIf="exp.projects && exp.projects.length > 0">
+              <h5>Projects:</h5>
+              <div class="project-item" *ngFor="let project of exp.projects">
+                <strong>{{ project.name }}:</strong> {{ project.description }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

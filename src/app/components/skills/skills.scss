@@ -1,0 +1,74 @@
+@use 'variables' as *;
+
+.skills-section {
+  background-color: $card-bg;
+
+  .skills-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .skill-category {
+    margin-bottom: 2.5rem;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: $primary-color;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba($primary-color, 0.2);
+    }
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-item {
+    margin-bottom: 1.5rem;
+
+    .skill-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+
+      .skill-name {
+        font-weight: 600;
+      }
+
+      .skill-level {
+        color: $light-text;
+      }
+    }
+
+    .progress-bar {
+      height: 8px;
+      background-color: rgba($primary-color, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 4px;
+      
+      &.expert {
+        background: linear-gradient(to right, #4CAF50, #8BC34A);
+      }
+      
+      &.advanced {
+        background: linear-gradient(to right, #2196F3, #03A9F4);
+      }
+      
+      &.intermediate {
+        background: linear-gradient(to right, #FF9800, #FFC107);
+      }
+      
+      &.beginner {
+        background: linear-gradient(to right, #F44336, #FF5722);
+      }
+    }
+  }
+}

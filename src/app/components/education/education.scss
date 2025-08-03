@@ -1,0 +1,85 @@
+@use 'variables' as *;
+
+.education-section {
+  background-color: $background-color;
+
+  .education-item {
+    h4 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: $text-color;
+    }
+
+    h5 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: $light-text;
+    }
+
+    .education-meta {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+      color: $light-text;
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        i {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .certification-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed #ddd;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: $text-color;
+    }
+
+    .cert-meta {
+      margin-bottom: 0.5rem;
+      color: $light-text;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+
+    .cert-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: $primary-color;
+      font-weight: 500;
+
+      &:hover {
+        color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}

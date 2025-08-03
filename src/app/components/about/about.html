@@ -1,0 +1,54 @@
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="profile-image">
+          <div class="image-placeholder">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <h1>Sauvik Biswas</h1>
+        <h2 class="typed">
+          <ngx-typed-js [strings]="typedOptions.strings" 
+                       [typeSpeed]="typedOptions.typeSpeed"
+                       [showCursor]="typedOptions.showCursor">
+            <span class="typing"></span>
+          </ngx-typed-js>
+        </h2>
+        <p class="summary">{{ summary }}</p>
+        
+        <div class="contact-info">
+          <ul>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:{{ contactInfo.email }}">{{ contactInfo.email }}</a>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:{{ contactInfo.phone }}">{{ contactInfo.phone }}</a>
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>{{ contactInfo.location }}</span>
+            </li>
+            <li>
+              <i class="fab fa-linkedin"></i>
+              <a href="https://{{ contactInfo.linkedin }}" target="_blank">{{ contactInfo.linkedin }}</a>
+            </li>
+            <li>
+              <i class="fab fa-github"></i>
+              <a href="https://{{ contactInfo.github }}" target="_blank">{{ contactInfo.github }}</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="action-buttons">
+          <a href="assets/Sauvik_Biswas_Resume.zip" class="btn btn-primary" download>Download CV</a>
+          <a routerLink="/contact" class="btn btn-outline-primary">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

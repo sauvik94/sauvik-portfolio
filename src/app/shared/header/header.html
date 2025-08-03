@@ -1,0 +1,26 @@
+<header class="header" [class.menu-open]="isMenuOpen">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo" data-aos="fade-down">
+        <a routerLink="/about" (click)="closeMenu()">Sauvik Biswas</a>
+      </div>
+      
+      <nav class="nav" [class.active]="isMenuOpen" data-aos="fade-down">
+        <ul>
+          <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+          <li><a routerLink="/experience" routerLinkActive="active" (click)="closeMenu()">Experience</a></li>
+          <li><a routerLink="/skills" routerLinkActive="active" (click)="closeMenu()">Skills</a></li>
+          <li><a routerLink="/education" routerLinkActive="active" (click)="closeMenu()">Education</a></li>
+          <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Projects</a></li>
+          <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="menu-toggle" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</header>

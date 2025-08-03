@@ -1,0 +1,62 @@
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2>Contact Me</h2>
+      <p>Get in touch for opportunities</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <a href="mailto:sauvikbiswas94&#64;gmail.com">sauvikbiswas94&#64;gmail.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>Phone</h3>
+              <a href="tel:9875585915">9875585915</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Location</h3>
+              <span>Bangalore, India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="contact-form">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <input type="text" formControlName="name" placeholder="Your Name" required>
+            </div>
+            
+            <div class="form-group">
+              <input type="email" formControlName="email" placeholder="Your Email" required>
+            </div>
+            
+            <div class="form-group">
+              <input type="text" formControlName="subject" placeholder="Subject" required>
+            </div>
+            
+            <div class="form-group">
+              <textarea formControlName="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

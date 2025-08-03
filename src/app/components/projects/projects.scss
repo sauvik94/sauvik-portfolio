@@ -1,0 +1,61 @@
+@use 'variables' as *;
+
+.projects-section {
+  background-color: $card-bg;
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: $shadow;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+
+    h3 {
+      font-size: 1.3rem;
+      color: $primary-color;
+    }
+  }
+
+  .project-meta {
+    color: $light-text;
+    font-size: 0.9rem;
+  }
+
+  .project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+    span {
+      background-color: lighten($primary-color, 40%);
+      color: $primary-color;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+  }
+
+  .project-description {
+    color: $text-color;
+    line-height: 1.6;
+  }
+}
